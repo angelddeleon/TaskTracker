@@ -7,31 +7,31 @@ class File:
             tasks = json.load(archivo)
             print("Tareas Creadas")
             for task in tasks:
-                print(f"id: {task['id']}, {task['name']} {task['state']}")
+                print(f"id: {task['id']}, {task['name']} {task['status']}")
 
     def readNotDone():
         with open("task.json", "r") as archivo:
             tasks = json.load(archivo)
             print("Tareas Sin Empezar")
             for task in tasks:
-                if task['state'] == 'Not Done':
-                    print(f"id: {task['id']}, {task['name']} {task['state']}")
+                if task['status'] == 'Not Done':
+                    print(f"id: {task['id']}, {task['name']} {task['status']}")
 
     def readProgress():
         with open("task.json", "r") as archivo:
             tasks = json.load(archivo)
             print("Tareas En Progreso")
             for task in tasks:
-                if task['state'] == 'Progress':
-                    print(f"id: {task['id']}, {task['name']} {task['state']}")
+                if task['status'] == 'Progress':
+                    print(f"id: {task['id']}, {task['name']} {task['status']}")
 
     def readDone():
         with open("task.json", "r") as archivo:
             tasks = json.load(archivo)
             print("Tareas Terminadas")
             for task in tasks:
-                if task['state'] == 'Done':
-                    print(f"id: {task['id']}, {task['name']} {task['state']}")
+                if task['status'] == 'Done':
+                    print(f"id: {task['id']}, {task['name']} {task['status']}")
 
     @staticmethod
     def write(tasks):
